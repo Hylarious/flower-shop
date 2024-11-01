@@ -1,0 +1,85 @@
+@import '../../../styles/settings.scss';
+
+.simple_carousel {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    height: 275px;
+    margin: 0 auto 100px auto;
+    overflow: hidden;
+
+    .carousel_container {
+      width: 100%;
+      height: 100%;
+      position: relative;
+    }
+  
+    .carousel_slide {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      transition: $transition;
+  
+      &.active {
+        opacity: 1;
+      }
+    }
+  
+    .carousel_button {
+      position: absolute;
+      top: 40%;
+      transform: translateY(-50%);
+      background-color: $color-main-lighter-opacity;
+      border: none;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: $transition;
+      
+  
+      &:hover {
+        background-color: $color-main-lighter;
+      }
+  
+      &.prev {
+        left: 10px;
+      }
+  
+      &.next {
+        right: 10px;
+      }
+    }
+  
+    .carousel_indicators {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 10px;
+  
+      .indicator {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: $color-main-light;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+  
+        &.active {
+          background-color: $color-main-lighter;
+        }
+  
+        &:hover {
+          background-color: $color-main;
+        }
+      }
+    }
+  }

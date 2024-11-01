@@ -1,0 +1,56 @@
+@import "../../../styles/settings.scss";
+
+.footer {
+  background-color: #faf8f9;
+  padding: 2rem 0;
+  font-family: Arial, sans-serif;
+
+  &__content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+
+  &__section {
+    flex: 1;
+    min-width: 200px;
+    margin: 1rem 1rem;
+
+    h3 {
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+  }
+
+  &__social_links {
+    display: flex;
+    gap: 1rem;
+
+    a {
+      color: $color-main-light;
+      text-decoration: none;
+      font-size: 0.9rem;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__bottom {
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid $color-main-lighter;
+    font-size: 0.8rem;
+    color: $color-main-light;
+  }
+}
